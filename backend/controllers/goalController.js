@@ -8,7 +8,7 @@ const postGoals =asyncHandler(async(req,res) =>{
         res.status(400)
         throw new Error('please enter text field');
     }
-    res.status(200).json({msg : 'Post goals controller '})
+    res.status(200).json({msg : 'set goals controller '})
 });
 
 const putGoals =asyncHandler(async(req,res) =>{
