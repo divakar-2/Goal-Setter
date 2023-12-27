@@ -8,7 +8,7 @@ const goalSchema= mongoose.Schema(
         },
     },
     {
-        timeStamps : true,
+        timestamps : true,
     }
 );
 module.exports= mongoose.model('Goal',goalSchema);
