@@ -62,7 +62,8 @@ const generateJWT= (id)=>{
 }
 
 const getMe=asyncHandler(async(req,res)=>{
-    res.status(200).json({message:'User fetched'});
+    const {_id,name,email} = await User.findById(req.user.id);
+    res.json({id:_id,name,email})
 });
 
 module.exports={
