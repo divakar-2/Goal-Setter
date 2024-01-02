@@ -13,13 +13,13 @@ const protect = asyncHandler(async(req,res,next)=>{
             next();
         }catch (error){
             res.status(401)
-            throw new Error('Not authorized to access this route');
+            throw new Error('Not authorized to access for this route');
         }
     }
     //if no token or token is not valid then return 401 Unauthorized error message
     if(!token) {
         res.status(400);
-        throw new Error('No token Passed');
+        throw new Error('No token is Passed');
     }
 });
 
