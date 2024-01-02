@@ -14,7 +14,7 @@ const registerUser = asyncHandler(async (req,res)=>{
 
     if(userExist){
         res.status(400);
-        throw new Error("Email is already in use");
+        throw new Error("Email is already in use so try with other email buddy");
     }
 
     const salt = await bcrypt.genSalt(10);
